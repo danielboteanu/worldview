@@ -82,7 +82,7 @@ class MeasureButton extends React.Component {
           onMouseDown={this.onButtonClick}
           disabled={isActive}
         >
-          <FontAwesomeIcon icon={faRuler} size="2x" />
+          <FontAwesomeIcon icon={faRuler} size="1x" />
         </Button>
       </>
     );

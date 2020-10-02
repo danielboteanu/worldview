@@ -33,6 +33,8 @@ import { notificationWarnings } from '../modules/image-download/constants';
 import Notify from '../components/image-download/notify';
 import { hasCustomPaletteInActiveProjection } from '../modules/palettes/util';
 import { getLayers } from '../modules/layers/selectors';
+// GeoSearch
+import Geosearch from '../components/geosearch/geosearch';
 
 
 Promise.config({ cancellation: true });
@@ -171,6 +173,7 @@ class toolbarContainer extends Component {
         >
           { !isDistractionFreeModeActive && (
             <>
+              <Geosearch />
               <Button
                 id="wv-link-button"
                 className="wv-toolbar-button"
@@ -180,7 +183,7 @@ class toolbarContainer extends Component {
                   CUSTOM_MODAL_PROPS.TOOLBAR_SHARE_LINK,
                 )}
               >
-                <FontAwesomeIcon icon={faShareSquare} size="2x" />
+                <FontAwesomeIcon icon={faShareSquare} size="1x" />
               </Button>
               {config.ui && config.ui.projections ? (
                 <Button
@@ -192,7 +195,7 @@ class toolbarContainer extends Component {
                     CUSTOM_MODAL_PROPS.TOOLBAR_PROJECTION,
                   )}
                 >
-                  <FontAwesomeIcon icon={faGlobeAsia} size="2x" />
+                  <FontAwesomeIcon icon={faGlobeAsia} size="1x" />
                 </Button>
               )
                 : ''}
@@ -213,7 +216,7 @@ class toolbarContainer extends Component {
                 }
                 onClick={this.openImageDownload}
               >
-                <FontAwesomeIcon icon={faCamera} size="2x" />
+                <FontAwesomeIcon icon={faCamera} size="1x" />
               </Button>
             </>
           )}
@@ -224,7 +227,7 @@ class toolbarContainer extends Component {
             onClick={() => openModal('TOOLBAR_INFO', CUSTOM_MODAL_PROPS.TOOLBAR_INFO)}
             data-content={notificationContentNumber}
           >
-            <FontAwesomeIcon icon={faInfoCircle} size="2x" />
+            <FontAwesomeIcon icon={faInfoCircle} size="1x" />
           </Button>
         </ButtonToolbar>
       </ErrorBoundary>

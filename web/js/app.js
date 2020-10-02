@@ -16,8 +16,6 @@ import Toolbar from './containers/toolbar';
 import Sidebar from './containers/sidebar/sidebar';
 // Modal
 import Modal from './containers/modal';
-// GeoSearch
-import Geosearch from './components/geosearch/geosearch';
 
 // Other/MISC
 import Brand from './brand';
@@ -203,7 +201,6 @@ class App extends React.Component {
         <div id="wv-animation-widet-case">
           {isAnimationWidgetActive ? <AnimationWidget key={locationKey || '2'} /> : null}
         </div>
-        <Geosearch />
         <MeasureButton />
         <Modal key={modalId} />
         <ErrorBoundary>
