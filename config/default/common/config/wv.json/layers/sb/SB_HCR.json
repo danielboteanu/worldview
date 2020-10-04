@@ -1,0 +1,32 @@
+{
+  "layers": {
+    "SB_HCR": {
+      "id": "SB_HCR",
+      "title": "SpaceBoys Horizontal Convective Roll (ML)",
+      "subtitle": "spaceappschallenge.org",
+      "description": "sb/SB_HCR",
+      "tags": "cloudstreet spaceappschallenge",
+      "layergroup": [
+        "sb"
+      ],
+
+      "format": "image/png",
+      "tileSize": [
+        512,
+        512
+      ],
+      "type": "wms",
+
+      "period": "daily",
+      "group": "overlays",
+      "projections": {
+        "geographic": {
+          "source": "SB:wms"
+        }
+      },
+      "daynight": [
+        "day"
+      ]
+    }
+  }
+}
